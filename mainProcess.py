@@ -3,20 +3,6 @@ import random
 import time
 import multiprocessing
 
-class Flag:
-    def __init__(self, value=False):
-        self.value = value
-
-    def is_completed(self):
-        return self.value
-
-    def set_completed(self):
-        self.value = True
-
-    def __str__(self):
-        return f'{self.value}'
-
-
 def timer(func):
 
     def wrapper(*args, **kwargs):
