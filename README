@@ -1,0 +1,12 @@
+###README###
+
+Welcome message for user
+Takes user's input and counts length of string input
+
+List of possible characters for strings to use.
+EX: [a-zA-Z ',.!?]
+
+Takes length of user's string of random letters from list
+and tries to form the users string randomly
+
+
