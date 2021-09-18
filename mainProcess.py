@@ -26,7 +26,7 @@ def run(name, string, possible_chars, lock, flag):
     count = 0
     while random_generated_string != user_input:
         random_generated_string = ''
-        for i in range(input_len):
+        for _ in range(input_len):
             random_generated_string += random.choice(possible_chars)
 
         with lock:
@@ -42,8 +42,10 @@ if __name__ == '__main__':
     possible_chars = ['a', 'b', 'c', 'd', 'e']
 
     #Grabs user input from the command line arguments
-    user_input = sys.argv[1]
-    print(user_input)
+    user_input = None
+    if len(sys.argv) > 1:
+        user_input = sys.argv[1]
+        print(user_input)
 
     #If no command line arguments, we ask user to input something
     if user_input == None:
